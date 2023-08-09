@@ -27,7 +27,7 @@
     
     <groupId>org.apache.rocketmq</groupId>
     <artifactId>rocketmq-spring-all</artifactId>
-    <version>2.2.3-SNAPSHOT</version>
+    <version>3.1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Apache RocketMQ Spring Boot ${project.version}</name>
@@ -35,51 +35,34 @@
     <url>https://github.com/apache/rocketmq-spring</url>
 
 
-    <scm>
-        <url>git@github.com:apache/rocketmq-spring.git</url>
-        <connection>scm:git:git@github.com:apache/rocketmq-spring.git</connection>
-        <developerConnection>scm:git:git@github.com:apache/rocketmq-spring.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-    <mailingLists>
-        <mailingList>
-            <name>Development List</name>
-            <subscribe>dev-subscribe@rocketmq.apache.org</subscribe>
-            <unsubscribe>dev-unsubscribe@rocketmq.apache.org</unsubscribe>
-            <post>dev@rocketmq.apache.org</post>
-        </mailingList>
-        <mailingList>
-            <name>User List</name>
-            <subscribe>users-subscribe@rocketmq.apache.org</subscribe>
-            <unsubscribe>users-unsubscribe@rocketmq.apache.org</unsubscribe>
-            <post>users@rocketmq.apache.org</post>
-        </mailingList>
-        <mailingList>
-            <name>Commits List</name>
-            <subscribe>commits-subscribe@rocketmq.apache.org</subscribe>
-            <unsubscribe>commits-unsubscribe@rocketmq.apache.org</unsubscribe>
-            <post>commits@rocketmq.apache.org</post>
-        </mailingList>
-    </mailingLists>
 
 
-    <organization>
-        <name>Apache Software Foundation</name>
-        <url>http://www.apache.org</url>
-    </organization>
+    <distributionManagement>
+        <repository>
+            <id>zcckj_releases</id>
+            <url>http://nexus.zcckj.com/repository/zcckj_releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>zcckj_snapshots</id>
+            <url>http://nexus.zcckj.com/repository/zcckj_snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
-        </license>
-    </licenses>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
