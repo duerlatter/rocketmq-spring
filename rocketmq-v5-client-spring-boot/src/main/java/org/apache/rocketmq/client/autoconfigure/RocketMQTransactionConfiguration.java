@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
 
 @Configuration
 public class RocketMQTransactionConfiguration implements ApplicationContextAware, SmartInitializingSingleton {
-    private final static Logger log = LoggerFactory.getLogger(RocketMQTransactionConfiguration.class);
+    private static final Logger log = LoggerFactory.getLogger(RocketMQTransactionConfiguration.class);
 
     private ConfigurableApplicationContext applicationContext;
 

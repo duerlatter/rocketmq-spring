@@ -22,7 +22,7 @@
 	<groupId>org.apache.rocketmq</groupId>
 	<artifactId>rocketmq-v5-client-spring-boot-samples</artifactId>
 	<packaging>pom</packaging>
-	<version>2.2.4-SNAPSHOT</version>
+	<version>3.1.2-SNAPSHOT</version>
 
 	<name>rocketmq-v5-client-spring-boot-samples</name>
 	<description>rocketmq-v5-client-spring-boot-samples</description>
@@ -37,7 +37,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<rocketmq-v5-client-spring-boot-starter-version>2.2.4-SNAPSHOT</rocketmq-v5-client-spring-boot-starter-version>
+		<rocketmq-v5-client-spring-boot-starter-version>3.1.2-SNAPSHOT</rocketmq-v5-client-spring-boot-starter-version>
 	</properties>
 
 
